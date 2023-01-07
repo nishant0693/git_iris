@@ -9,7 +9,7 @@ add_selectbox2 = st.sidebar.selectbox(
      "Choose the dataset",
     ("Iris", "Cancer", "wine")
 )
-with open("brain",'rb') as file:
+with open("git_iris/brain",'rb') as file:
     pred=pickle.load(file)
 
 a = st.text_input("Sepal Length",0)

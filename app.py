@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import pickle
+import sklearn
 
 st.markdown("<h1 style='text-align: left; color: red;'>Welcome to Machine Learning Model Deployment</h1>", unsafe_allow_html=True)
 
@@ -9,7 +10,7 @@ add_selectbox2 = st.sidebar.selectbox(
      "Choose the dataset",
     ("Iris", "Cancer", "wine")
 )
-with open("git_iris/brain",'rb') as file:
+with open("brain",'rb') as file:
     pred=pickle.load(file)
 
 a = st.text_input("Sepal Length",0)
